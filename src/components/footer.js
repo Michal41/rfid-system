@@ -10,39 +10,41 @@ const Footer = () => {
         <div className="footer bg-gradient-to-r from-pink to-purple p-10 mt-10 rounded-xl">
           <div className="grid grid-cols-2 xxs:grid-cols-1 lg:grid-cols-2">
             <div>
-              <img className="max-h-28 max-w-xs" src={logo} alt="Holo"></img>
+              <img className="max-h-28 max-w-xs" src={logo} alt="Systemy RFID"></img>
               <p className="text-black opacity-70 text-sm mt-5 ">
-                A stunning and minimal<br></br> personalized website starter
-                theme
+                Profesjonalne rozwiązania RFID<br></br> dla Twojej firmy. Zwiększ efektywność,
                 <br></br>
-                built with Gatsby.
+                zoptymalizuj procesy i<br></br>
+                zredukuj koszty operacyjne.
               </p>
               <p className="text-white text-lg font-bold mt-20">
                 <span className="text-black font-montserrat font-semibold mt-20">
-                  &copy; {new Date().getFullYear()}. All Rights Reserved.
+                  &copy; {new Date().getFullYear()} Wszelkie prawa zastrzeżone.
                 </span>
               </p>
               <div className="text-black font-bold block-inline">
                 <p>
                   <a className="text-black font-bold block-inline" href="/">
-                    Holo
+                    HOLO Systems
                   </a>
 
                   <a
                     className="text-black font-semibold ml-1"
                     target="_blank"
-                    href="https://travislord.xyz"
+                    href="/"
+                    rel="noopener noreferrer"
                   >
-                    By TL
+                    - Eksperci RFID
                   </a>
                   <a
                     href="https://github.com/lilxyzz/holo-theme"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <img
                       className="w-5 h-5 mt-1"
                       src="/img/Github-Logo.png"
-                      alt="GitHub"
+                      alt="GitHub HOLO Systems"
                     ></img>
                   </a>
                 </p>
@@ -52,19 +54,19 @@ const Footer = () => {
             <div className="place-self-end self-center xxs:hidden lg:block">
               <ul className="text-xl font-montserrat font-medium">
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/">Strona Główna</Link>
                 </li>
                 <li>
-                  <Link to="/about">About</Link>
+                  <Link to="/about">O Nas</Link>
                 </li>
                 <li>
-                  <Link to="/gallery">Gallery</Link>
+                  <Link to="/gallery">Realizacje</Link>
                 </li>{" "}
                 <li>
-                  <Link to="/blog">Blog</Link>
+                  <Link to="/blog">Aktualności</Link>
                 </li>
                 <li>
-                  <Link to="/contact">Contact</Link>
+                  <Link to="/contact">Kontakt</Link>
                 </li>
               </ul>
             </div>

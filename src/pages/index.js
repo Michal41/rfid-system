@@ -12,8 +12,8 @@ const IndexPage = () => (
   <div className="h-auto w-screen">
     <Layout>
       <Seo
-        title="Holo - Gatsby Theme"
-        description="Holo is a visually striking and highly customizable open source theme built on the powerful Gatsby framework and integrated with the versatile Decap CMS."
+        title="Systemy RFID | Oprogramowanie na zamówienie | Rozwiązania dla firm"
+        description="Profesjonalne rozwiązania RFID dla Twojej firmy. Tworzymy dedykowane oprogramowanie do zarządzania inwentarzem, śledzenia zasobów i kontroli dostępu. Zwiększ efektywność swojego biznesu z naszymi systemami RFID."
       ></Seo>
       <Header></Header>
       <FeatureSection></FeatureSection>
