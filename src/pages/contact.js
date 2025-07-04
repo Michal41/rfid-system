@@ -5,25 +5,24 @@ import Button from "../components/Atoms/button"
 import Fade from "react-reveal/Fade"
 import Seo from "../components/seo"
 
-import image from "../images/holographic-background.webp"
-
 const Contact = () => {
   return (
     <Layout>
       <Seo
-        title="Contact - Holo"
-        description="Holo is a visually striking and highly customizable open source theme built on the powerful Gatsby framework and integrated with the versatile Decap CMS"
+        title="Kontakt - Systemy RFID"
+        description="Skontaktuj się z nami w sprawie wdrożenia systemów RFID w Twojej firmie. Oferujemy bezpłatne konsultacje i wycenę projektów RFID."
       ></Seo>
 
       <div className="max-w-7xl mx-auto mt-10 flex text-white xxs:flex-col sm:flex-row">
         <Fade duration={1200}>
           <div className="bg-dp opacity-70 p-10 rounded-xl w-3/4 m-5 w-auto">
-            <h1 className="text-3xl text-white">CONTACT HOLO</h1>
+            <h1 className="text-3xl text-white">KONTAKT</h1>
             <h2 className=" text-black text-gradient bg-gradient-to-r from-pink to-purple text-4xl font-bold mt-2 xxs:text-lg sm:text-2xl lg:text-4xl">
-              Gatsby Theme
+              Systemy RFID
             </h2>
             <p className="text-lg mt-2 opacity-70 w-3/4 xxs:text-xs xxs:w-full sm:text-sm sm:w-3/4">
-              A stunning and minimal personalized website starter theme.
+              Skontaktuj się z nami, aby omówić możliwości wdrożenia systemu RFID w Twojej firmie. 
+              Oferujemy bezpłatne konsultacje i szczegółową wycenę projektu.
             </p>
 
             <div className="w-full shrink-0 grow-0 basis-auto lg:w-ful mt-10">
@@ -50,17 +49,17 @@ const Contact = () => {
                     </div>
                     <div className="ml-2 grow">
                       <p className="mb-2 font-bold underline decoration-pink">
-                        Phone
+                        Telefon
                       </p>
                       <p className="text-neutral-500 mb-2">
-                        <a href="tel:+#">(08) 9000 000</a>
+                        <a href="tel:+48730720007">+48 730 720 007</a>
                       </p>
                     </div>
                   </div>
                 </div>
                 <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-3">
                   <div className="flex items-start">
-                    <div className="shrink-0">
+                    {/* <div className="shrink-0">
                       <div className="inline-block rounded-md bg-teal-400-100 p-4 text-teal-700">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -83,11 +82,11 @@ const Contact = () => {
                         Email
                       </p>
                       <p className="text-neutral-500 mb-2">
-                        <a href="mailto:hello@holo.com?subject=Contact Holo for help.">
-                          hello@holo.com
+                        <a href="mailto:kontakt@rfid-systems.pl?subject=Zapytanie o system RFID">
+                          kontakt@rfid-systems.pl
                         </a>
                       </p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-3">
@@ -112,9 +111,9 @@ const Contact = () => {
                     </div>
                     <div className="ml-2 grow">
                       <p className="mb-2 font-bold underline decoration-pink">
-                        Location
+                        Obszar działania
                       </p>
-                      <p className="text-neutral-500 mb-2">Worldwide</p>
+                      <p className="text-neutral-500 mb-2">Cała Polska</p>
                     </div>
                   </div>
                 </div>
@@ -140,9 +139,9 @@ const Contact = () => {
                     </div>
                     <div className="ml-2 grow">
                       <p className="mb-2 font-bold underline decoration-pink">
-                        Opening Hours
+                        Godziny pracy
                       </p>
-                      <p className="text-neutral-500 mb-2">24/7</p>
+                      <p className="text-neutral-500 mb-2">Pon-Pt: 8:00-18:00</p>
                     </div>
                   </div>
                 </div>
@@ -153,7 +152,7 @@ const Contact = () => {
                 <div className="sm:mr-5 xxs:mr-0">
                   <label>
                     <Input
-                      placeholder="Your Name"
+                      placeholder="Imię i Nazwisko"
                       type="text"
                       name="name"
                     ></Input>
@@ -162,7 +161,7 @@ const Contact = () => {
                 <div className="sm:ml-5 xxs:ml-0 xxs:mt-2 sm:mt-0">
                   <label>
                     <Input
-                      placeholder="Your Email"
+                      placeholder="Email"
                       type="email"
                       name="email"
                     ></Input>
@@ -174,7 +173,7 @@ const Contact = () => {
                 <div className="sm:mr-5 xxs:mr-0">
                   <label>
                     <Input
-                      placeholder="Your Company"
+                      placeholder="Nazwa Firmy"
                       type="company"
                       name="company"
                     ></Input>
@@ -184,7 +183,7 @@ const Contact = () => {
                   <label>
                     {" "}
                     <Input
-                      placeholder="Your Phone"
+                      placeholder="Telefon"
                       type="phone"
                       name="phone"
                     ></Input>
@@ -195,7 +194,7 @@ const Contact = () => {
                 <textarea
                   className="mt-5 w-full bg-bg bg-opacity-20 rounded-xl p-5 focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
                   rows="5"
-                  placeholder="How can we help you?"
+                  placeholder="Opisz swoje potrzeby związane z systemem RFID..."
                   type="text"
                   name="Message"
                 ></textarea>
@@ -204,7 +203,7 @@ const Contact = () => {
                 <label>
                   <Button
                     type="submit"
-                    title="Send Message"
+                    title="Wyślij Wiadomość"
                     colorClass="bg-gradient-to-r from-pink to-purple font-montserrat"
                     marginClass="mt-5"
                   ></Button>
@@ -217,8 +216,8 @@ const Contact = () => {
           <div className="w-1/4 overflow-hidden rounded-xl m-5 xxs:hidden sm:block">
             <img
               className="object-cover h-full w-full"
-              src={image}
-              alt="HeroImage"
+              src="/img/contact-rfid.jpg"
+              alt="Systemy RFID"
             ></img>
           </div>
         </Fade>

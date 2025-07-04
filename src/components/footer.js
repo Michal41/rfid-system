@@ -1,8 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
 
-import logo from "../images/3D-liquid-abstract-5.webp"
-
 const Footer = () => {
   return (
     <div className="m-4">
@@ -10,7 +8,6 @@ const Footer = () => {
         <div className="footer bg-gradient-to-r from-pink to-purple p-10 mt-10 rounded-xl">
           <div className="grid grid-cols-2 xxs:grid-cols-1 lg:grid-cols-2">
             <div>
-              <img className="max-h-28 max-w-xs" src={logo} alt="Systemy RFID"></img>
               <p className="text-black opacity-70 text-sm mt-5 ">
                 Profesjonalne rozwiązania RFID<br></br> dla Twojej firmy. Zwiększ efektywność,
                 <br></br>
@@ -25,7 +22,7 @@ const Footer = () => {
               <div className="text-black font-bold block-inline">
                 <p>
                   <a className="text-black font-bold block-inline" href="/">
-                    HOLO Systems
+                    RFID Systems
                   </a>
 
                   <a
@@ -35,17 +32,6 @@ const Footer = () => {
                     rel="noopener noreferrer"
                   >
                     - Eksperci RFID
-                  </a>
-                  <a
-                    href="https://github.com/lilxyzz/holo-theme"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="w-5 h-5 mt-1"
-                      src="/img/Github-Logo.png"
-                      alt="GitHub HOLO Systems"
-                    ></img>
                   </a>
                 </p>
               </div>
@@ -62,9 +48,6 @@ const Footer = () => {
                 <li>
                   <Link to="/gallery">Realizacje</Link>
                 </li>{" "}
-                <li>
-                  <Link to="/blog">Aktualności</Link>
-                </li>
                 <li>
                   <Link to="/contact">Kontakt</Link>
                 </li>
