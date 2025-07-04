@@ -1,12 +1,6 @@
 import React from "react"
 import Fade from "react-reveal/Fade"
 
-// Assets
-import HeroImage from "../../images/holographic-background-1.webp"
-import Image1 from "../../images/3D-liquid-abstract-1.webp"
-import Image2 from "../../images/3D-liquid-abstract.webp"
-import Image3 from "../../images/3D-liquid-abstract-3.webp"
-
 const FeatureSection = () => {
   return (
     <div className="max-w-7xl mx-auto">
@@ -37,7 +31,7 @@ const FeatureSection = () => {
           <div className="lg:w-1/2 my-4">
             <img
               className="rounded-xl h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-              src={HeroImage}
+              src="/img/home-warehouse.jpg"
               alt="Systemy RFID dla firm"
             ></img>
           </div>
@@ -174,13 +168,13 @@ const FeatureSection = () => {
       <Fade bottom cascade>
         <div className="grid grid-cols-3 mt-10 gap-4 xxs:grid-cols-1 lg:grid-cols-3 px-5">
           <div className="rounded-xl overflow-hidden relative hover:opacity-100 flex justify-center">
-            <img alt="System RFID w magazynie" src={Image1}></img>
+            <img className="w-full h-full object-cover"  alt="System RFID w magazynie" src="/img/home-warehouse.jpg"></img>
           </div>
           <div className="rounded-xl overflow-hidden relative hover:opacity-100 flex justify-center">
-            <img alt="Kontrola dostępu RFID" src={Image2}></img>
+            <img className="w-full h-full object-cover"  alt="Kontrola dostępu RFID" src="/img/home-access.jpg"></img>
           </div>
-          <div className="rounded-xl overflow-hidden relative hover:opacity-100 hidden lg:block ">
-            <img alt="Śledzenie zasobów RFID" src={Image3}></img>
+          <div className="rounded-xl overflow-hidden relative hover:opacity-100 flex justify-center">
+            <img className="w-full h-full object-cover" alt="Śledzenie zasobów RFID" src="/img/home-manufacturing.jpg"></img>
           </div>
         </div>
       </Fade>
