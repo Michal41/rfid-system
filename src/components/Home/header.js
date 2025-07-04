@@ -1,8 +1,6 @@
 import React from "react"
 import Fade from "react-reveal/Fade"
 
-import hero from "../../images/removed-Holographic.webp"
-
 const Header = () => {
   return (
     <Fade duration={2200}>
@@ -50,7 +48,7 @@ const Header = () => {
               </div>
               <div className="mt-3 sm:mt-0 sm:ml-3">
                 <a
-                  href="/about"
+                  href="/o-nas"
                   className="transition-all duration-500ms ease-in-out hover:ease-in-out w-full flex items-center justify-center px-8 py-3 border border-purple text-base font-medium rounded-md text-black hover:text-white bg-transparent hover:bg-purple md:py-3 md:text-lg md:px-10"
                 >
                   Nasze Rozwiązania
@@ -62,7 +60,7 @@ const Header = () => {
           <div className="lg:inset-y-0 lg:right-0 lg:w-1/2 my-4 flex lg:justify-end justify-center">
             <img
               className="rounded-xl w-auto h-full object-cover flex justify-center"
-              src={hero}
+              src="/img/home-hero.jpg"
               alt="Rozwiązania Programowe RFID"
             ></img>
           </div>
