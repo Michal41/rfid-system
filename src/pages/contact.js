@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
 import Input from "../components/Atoms/input"
 import Button from "../components/Atoms/button"
@@ -6,6 +6,65 @@ import Fade from "react-reveal/Fade"
 import Seo from "../components/seo"
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    message: ""
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null)
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+
+    try {
+      const response = await fetch('https://fluent-future.com/tutors/form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone,
+          message: formData.message,
+          subject: 'Zapytanie o system RFID'
+        })
+      })
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          message: ""
+        })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <Layout>
       <Seo
@@ -147,7 +206,20 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <form className="mt-5" name="contact" method="POST" netlify>
+
+            {/* Status Messages */}
+            {submitStatus === 'success' && (
+              <div className="mb-5 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
+                Dziękujemy! Twoja wiadomość została wysłana. Skontaktujemy się z Tobą wkrótce.
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className="mb-5 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
+                Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie lub skontaktuj się telefonicznie.
+              </div>
+            )}
+
+            <form className="mt-5" onSubmit={handleSubmit}>
               <div className="flex xxs:flex-col sm:flex-row">
                 <div className="sm:mr-5 xxs:mr-0">
                   <label>
@@ -155,6 +227,9 @@ const Contact = () => {
                       placeholder="Imię i Nazwisko"
                       type="text"
                       name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
                     ></Input>
                   </label>
                 </div>
@@ -164,6 +239,9 @@ const Contact = () => {
                       placeholder="Email"
                       type="email"
                       name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
                     ></Input>
                   </label>
                 </div>
@@ -174,8 +252,11 @@ const Contact = () => {
                   <label>
                     <Input
                       placeholder="Nazwa Firmy"
-                      type="company"
+                      type="text"
                       name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      required
                     ></Input>
                   </label>
                 </div>
@@ -184,28 +265,34 @@ const Contact = () => {
                     {" "}
                     <Input
                       placeholder="Telefon"
-                      type="phone"
+                      type="tel"
                       name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      required
                     ></Input>
                   </label>
                 </div>
               </div>
               <label>
                 <textarea
-                  className="mt-5 w-full bg-bg bg-opacity-20 rounded-xl p-5 focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent"
+                  className="mt-5 w-full bg-bg bg-opacity-20 rounded-xl p-5 focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent text-black placeholder-gray-600"
                   rows="5"
                   placeholder="Opisz swoje potrzeby związane z systemem RFID..."
-                  type="text"
-                  name="Message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
                 ></textarea>
               </label>
               <div>
                 <label>
                   <Button
                     type="submit"
-                    title="Wyślij Wiadomość"
+                    title={isSubmitting ? "Wysyłanie..." : "Wyślij Wiadomość"}
                     colorClass="bg-gradient-to-r from-pink to-purple font-montserrat"
                     marginClass="mt-5"
+                    disabled={isSubmitting}
                   ></Button>
                 </label>
               </div>
