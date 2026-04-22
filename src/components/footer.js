@@ -49,6 +49,9 @@ const Footer = () => {
                   <Link to="/realizacje">Realizacje</Link>
                 </li>{" "}
                 <li>
+                  <Link to="/rfid-magazyn">RFID Magazyn</Link>
+                </li>
+                <li>
                   <Link to="/contact">Kontakt</Link>
                 </li>
               </ul>

@@ -12,9 +12,9 @@ const IndexPage = () => (
   <div className="h-auto w-screen">
     <Layout>
       <Seo
-        title="Systemy RFID | Oprogramowanie na zamówienie | Rozwiązania dla firm"
-        description="Profesjonalne rozwiązania RFID dla Twojej firmy. Tworzymy dedykowane oprogramowanie do zarządzania inwentarzem, śledzenia zasobów i kontroli dostępu. Zwiększ efektywność swojego biznesu z naszymi systemami RFID."
-      ></Seo>
+        title="Systemy RFID dla firm | Magazyn, produkcja, automatyzacja"
+        description="Systemy RFID dla firm: magazyn, produkcja i śledzenie zasobów. Projektujemy i wdrażamy rozwiązania RFID oraz oprogramowanie dopasowane do Twojego biznesu."
+      />
       <Header></Header>
       <FeatureSection></FeatureSection>
       <FeaturedBlog></FeaturedBlog>
