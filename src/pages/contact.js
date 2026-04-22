@@ -30,7 +30,7 @@ const Contact = () => {
     setSubmitStatus(null)
 
     try {
-      const response = await fetch('https://fluent-future.com/tutors/form', {
+      const response = await fetch('https://tutor.fluent-future.com/tutors/form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
