@@ -7,8 +7,8 @@ const GalleryPage = () => {
   return (
     <Layout>
       <Seo
-        title="Holo - Gallery"
-        description="Holo is a visually striking and highly customizable open source theme built on the powerful Gatsby framework and integrated with the versatile Decap CMS"
+        title="Realizacje systemów RFID"
+        description="Zobacz wdrożenia systemów RFID: magazyny, produkcja, handel i służba zdrowia. Automatyzacja inwentaryzacji, śledzenie zasobów i kontrola procesów."
       ></Seo>
       <Gallery></Gallery>
     </Layout>
